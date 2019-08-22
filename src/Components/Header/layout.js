@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core';
-import PropTypes from 'prop-types';
 import { Typography, AppBar, Toolbar } from '@material-ui/core';
 
 import style from './style';
 
 class Layout extends Component {
-  static propTypes: { classes: PropTypes.Validator<object> };
-
   render() {
     const { classes, title } = this.props;
     return (
@@ -21,10 +18,5 @@ class Layout extends Component {
     )
   }
 }
-
-Layout.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
 
 export default withStyles(style)(Layout);
