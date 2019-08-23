@@ -5,7 +5,8 @@ const style = () => ({
   container: {
     display: 'flex',
     alignItems: 'center',
-    flex: 1,
+    justifyContent:"center",
+    height:"90vh",
     flexDirection: 'column',
   },
   avatar:{
@@ -36,6 +37,9 @@ const style = () => ({
   button:{
     backgroundColor:"#1e90ff",
 
+  },
+  buttonLink:{
+    textDecoration:"none"
   }
 
 

@@ -4,9 +4,8 @@ import PropTypes from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
 import { Typography, AppBar, Toolbar, Button } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-
 import style from './style';
-
+import {Link} from 'react-router-dom';
 class Layout extends Component {
   // static propTypes: { classes: PropTypes.Validator<object> };
 
@@ -18,12 +17,21 @@ class Layout extends Component {
             <IconButton edge="start" color="inherit" aria-label="menu">
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" >
-              {title || 'Desiese Finder'}
+            <Typography variant="normal" >
+              {title || 'DesieseFinder'}
             </Typography>
+            <div className={classes.AppBarstyle}>
+      <Link to='/login'>
             <Button variant="contained" className={classes.button}>
               LogOut
           </Button>
+        </Link>
+      <Link to="/about">
+          <Button variant="contained" className={classes.button}>
+              About Us
+          </Button>
+      </Link>
+          </div>
           </Toolbar>
         </AppBar>
       )

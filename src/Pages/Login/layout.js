@@ -7,9 +7,8 @@ import LockIcon from '@material-ui/icons/Lock';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { Typography, TextField,Button } from '@material-ui/core';
 import style from './style';
+import {Link} from 'react-router-dom';
 class Layout extends Component {
-  // static propTypes: { classes: PropTypes.Validator<object> };
-
   render() {
     const { classes } = this.props;
     return (
@@ -47,10 +46,13 @@ class Layout extends Component {
             }}
            />
           <div className={classes.center}>
+            <Link to="/" className={classes.buttonLink}>
           <Button variant="contained" style={{background:'#1e90ff',color:"white"}} className={classes.button}>
         LOGIN
       </Button>
+      </Link>
       </div>
+
         </form>
       </div>
 

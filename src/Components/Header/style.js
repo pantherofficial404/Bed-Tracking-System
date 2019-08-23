@@ -4,11 +4,14 @@ const style = () => ({
   navigationBar: {
     backgroundColor: colors.themeColor,
   },
+  AppBarstyle:{
+    marginLeft:"auto",
+  },
   button:{
     color:"#333",
     float:"right",
     backgroundColor:"#fff",
-    marginLeft: 'auto',
+    marginLeft:"5px"
   },
 
 
