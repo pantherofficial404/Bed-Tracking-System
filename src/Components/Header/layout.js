@@ -7,10 +7,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import style from './style';
 import {Link} from 'react-router-dom';
 class Layout extends Component {
-  // static propTypes: { classes: PropTypes.Validator<object> };
-
   render() {
-    const { classes, title } = this.props;
+    const { classes } = this.props;
     return (
         <AppBar position="static">
           <Toolbar className={classes.navigationBar}>
@@ -18,7 +16,7 @@ class Layout extends Component {
               <MenuIcon />
             </IconButton>
             <Typography variant="normal" >
-              {title || 'DesieseFinder'}
+              {'DesieseFinder'}
             </Typography>
             <div className={classes.AppBarstyle}>
       <Link to='/login'>
