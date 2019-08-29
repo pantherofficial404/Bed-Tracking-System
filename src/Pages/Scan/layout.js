@@ -4,9 +4,11 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import style from './style';
 
+
 import { Typography, AppBar, Toolbar, Button } from '@material-ui/core';
     class Layout extends Component {
-    constructor(props) {
+
+        constructor(props) {
         super(props)
         this.state = {
             file: null

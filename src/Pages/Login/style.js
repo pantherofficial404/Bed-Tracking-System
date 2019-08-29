@@ -1,48 +1,55 @@
 import colors from '../../Theme/Colors';
-import { Button } from '@material-ui/core';
+import { borderRadius } from '@material-ui/system';
 
 const style = () => ({
   container: {
     display: 'flex',
     alignItems: 'center',
     justifyContent:"center",
-    height:"90vh",
+    height:"100vh",
     flexDirection: 'column',
-  },
-  avatar:{
-    marginTop:"25px",
-    maxHeight:"132px",
-  },
-  SystemTitle:{
-      color:"black",
-      marginTop:"10px",
-      fontFamily: 'Roboto',
-  },
-  textField:{
-    width:"21.875em",
-    display:"flex",
-    flexDirection:"column",
-    border:"1px solid  black",
-    borderRadius:"5px",
-    outline:"none",
+    // boxShadow:"0px 1px 3px 0px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12)",
 
   },
-  icon:{
-    color:"#1e90ff",
+  from:{
+    width:'100%',
+    marginTop:"1.5rem"
   },
-  center:{
-    marginTop:"20px",
-    textAlign : 'center',
-  },
-  button:{
-    backgroundColor:"#1e90ff",
+  btnsubmit:{
+  backgroundColor:'#1e90ff',
+  marginTop:"1.3rem",
+    '&:hover':{
+      backgroundColor:"#1e90ff"
+    }
+},
+Typography:{
+  marginTop:"0.8rem",
+  fontFamily: 'Cursive',
+  fontWeight:"200",
+},
+textField:{
 
-  },
-  buttonLink:{
-    textDecoration:"none"
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: '#000',
+      borderWidth:"1px",
+      borderRadius:"0.5rem",
+    },
+     '&.Mui-focused fieldset':{
+      borderColor:"#000",
+      borderWidth:"1px",
+    },
   }
-
-
+},
+avatar:{
+  backgroundColor:"#1e90ff",
+},
+icon:{
+  color:"#1e90ff"
+},
+checkbox:{
+  backgroundColor:"1e90ff"
+}
 });
 
 export default style;
