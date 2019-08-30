@@ -21,7 +21,7 @@ class Layout extends Component {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5" className={classes.Typography}>
-          Sign In
+          Sign Up
         </Typography>
         <form className={classes.from} noValidate>
         <TextField
@@ -66,7 +66,7 @@ class Layout extends Component {
             color="primary"
             className={classes.btnsubmit}
           >
-            Sign In
+            Sign Up
           </Button>
           {/* <Button
             type="submit"
@@ -85,7 +85,6 @@ class Layout extends Component {
   }
 }
 
-Layout.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
+
 export default withStyles(style)(Layout);
+
