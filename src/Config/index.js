@@ -1,7 +1,6 @@
 import packageJson from '../../package.json';
 
 const config = {
-
     get PUBLIC_URL(){
         return process.env.PUBLIC_URL;
     },
