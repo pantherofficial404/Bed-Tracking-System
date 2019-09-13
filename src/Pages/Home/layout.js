@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import { withStyles } from '@material-ui/core';
-import { Typography } from '@material-ui/core';
+import { withStyles, Typography} from '@material-ui/core';
 
 import style from './style';
-import Header from '../../Components/Header/layout';
+import Header from 'Components/Header/layout';
 
 class Layout extends Component {
   render() {

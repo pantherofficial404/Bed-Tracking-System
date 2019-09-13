@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-import { withStyles } from '@material-ui/core';
-import { Typography, AppBar, Toolbar } from '@material-ui/core';
+import React, { Component } from 'react';
+import { Typography, AppBar, Toolbar ,withStyles} from '@material-ui/core';
 
 import style from './style';
 
