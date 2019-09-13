@@ -1,6 +1,4 @@
-import colors from '../../Theme/Colors';
-
-const style = () => ({
+const style = (theme) => ({
   container: {
     display: 'flex',
     alignItems: 'center',

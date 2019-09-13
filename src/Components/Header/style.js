@@ -1,9 +1,6 @@
-import colors from '../../Theme/Colors';
-
-const style = () => ({
-  navigationBar: {
-    backgroundColor: colors.themeColor,
-  }
+const style = (theme) => ({
+    navigationBar: {
+      backgroundColor: theme.palette.primary.main,
+    }
 });
-
 export default style;
