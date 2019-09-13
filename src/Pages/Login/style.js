@@ -1,7 +1,9 @@
 import colors from '../../Theme/Colors';
 import { borderRadius } from '@material-ui/system';
 
-const style = Theme  => ({
+
+
+const style = ()  => ({
   container: {
     display: 'flex',
     alignItems: 'center',

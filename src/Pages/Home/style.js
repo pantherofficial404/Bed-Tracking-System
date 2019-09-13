@@ -1,6 +1,4 @@
 import colors from '../../Theme/Colors';
-import { color } from '@material-ui/system';
-import { textAlign } from '@material-ui/system';
 
 const style = () => ({
   container: {
