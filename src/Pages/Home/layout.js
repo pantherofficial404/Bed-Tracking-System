@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { withStyles, Typography} from '@material-ui/core';
 
 import style from './style';
-import Header from 'Components/Header/layout';
+import {Header} from 'Components/index'
 
 class Layout extends Component {
   render() {
