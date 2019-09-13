@@ -1,8 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Home from 'Pages/Home/layout';
-import Login from 'Pages/Login/layout';
+import Home from 'Pages/Home';
+import Login from 'Pages/Login';
+
+// const PrivateRouter = ({component,...rest})=>{
+//     const render = (props)=> {
+//         let redirectUrl = '/login';
+//     }
+// }
 
 class Root extends React.Component{
     render(){
