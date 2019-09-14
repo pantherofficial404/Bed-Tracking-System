@@ -4,8 +4,10 @@ const config = require('config');
 const Debug = require('debug');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const absPath = require('app-module-path');
 
-const router = require('./Routes');
+absPath.addPath(__dirname);
+const router = require('Routes');
 
 const debug = Debug('app:server');
 const error = Debug('app:error');

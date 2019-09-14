@@ -1,5 +1,5 @@
 {
-  "name": "bed-tracking-system",
+  "name": "mern-app",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,15 +7,7 @@
     "install": "cd ./portal && npm install && cd .. && cd ./backend && npm install && cd ..",
     "start:backend": "cd ./backend && npm start && cd .."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pantherofficial404/Bed-Tracking-System.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pantherofficial404/Bed-Tracking-System/issues"
-  },
-  "homepage": "https://github.com/pantherofficial404/Bed-Tracking-System#readme",
   "description": ""
 }
