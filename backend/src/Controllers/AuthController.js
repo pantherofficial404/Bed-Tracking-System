@@ -94,6 +94,10 @@ const signup = async (req,res,next)=>{
         JSON.stringify(authInfo),
         config.get('jwt').secret,
     );
+    await new User({
+        username,
+        password
+    }).save();
     res.status(200);
     res.json({
         code:200,
