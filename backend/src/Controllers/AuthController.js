@@ -20,6 +20,7 @@ const login = async (req,res,next)=>{
             },
             success:false,
         });
+        return;
     }
 
     const user = await User.findOne({username,password});
@@ -32,6 +33,7 @@ const login = async (req,res,next)=>{
             },
             success:false,
         });
+        return;
     }
     const expiredOn = Date.now() + 1000 * 60 * 60;
     const authInfo = {
@@ -52,6 +54,7 @@ const login = async (req,res,next)=>{
         },
         success:true,
     });
+    return;
 }
 
 const signup = async (req,res,next)=>{
@@ -72,6 +75,7 @@ const signup = async (req,res,next)=>{
             },
             success:false,
         });
+        return;
     }
     const user = await User.findOne({username,password});
     if(user){
@@ -83,6 +87,7 @@ const signup = async (req,res,next)=>{
             },
             success:false,
         });
+        return;
     }
 
     const expiredOn = Date.now() + 1000 * 60 * 60;
@@ -108,6 +113,7 @@ const signup = async (req,res,next)=>{
         },
         success:true,
     });
+    return;
 }
 
 module.exports = {
