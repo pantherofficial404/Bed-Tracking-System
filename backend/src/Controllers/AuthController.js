@@ -1,15 +1,15 @@
-const { User } = require("Models");
-const jwt = require("jsonwebtoken");
-const config = require("config");
+const { User } = require('Models');
+const jwt = require('jsonwebtoken');
+const config = require('config');
 
 const login = async (req, res, next) => {
   const { username, password } = req.body;
   const message = [];
   if (!username) {
-    message.push("Username is required");
+    message.push('Username is required');
   }
   if (!password) {
-    message.push("Password is required");
+    message.push('Password is required');
   }
   if (!username || !password) {
     res.status(401);
@@ -23,13 +23,13 @@ const login = async (req, res, next) => {
     return;
   }
 
-  const user = await User.findOne({ username, password });
+  const user = await User.findOne({ username, password }, { username: 1 });
   if (!user) {
     res.status(401);
     res.json({
       code: 401,
       data: {
-        message: ["Invalid username or password"]
+        message: ['Invalid username or password']
       },
       success: false
     });
@@ -40,7 +40,7 @@ const login = async (req, res, next) => {
     expiredOn,
     username
   };
-  const token = jwt.sign(JSON.stringify(authInfo), config.get("jwt").secret);
+  const token = jwt.sign(JSON.stringify(authInfo), config.get('jwt').secret);
   res.status(200);
   res.json({
     code: 200,
@@ -58,10 +58,10 @@ const signup = async (req, res, next) => {
   const { username, password } = req.body;
   const message = [];
   if (!username) {
-    message.push("Username is required");
+    message.push('Username is required');
   }
   if (!password) {
-    message.push("Password is required");
+    message.push('Password is required');
   }
   if (!username || !password) {
     res.status(401);
@@ -74,13 +74,13 @@ const signup = async (req, res, next) => {
     });
     return;
   }
-  const user = await User.findOne({ username, password });
+  const user = await User.findOne({ username, password }, { username: 1 });
   if (user) {
     res.status(401);
     res.json({
       code: 401,
       data: {
-        message: ["User is already exists"]
+        message: ['User is already exists']
       },
       success: false
     });
@@ -92,7 +92,7 @@ const signup = async (req, res, next) => {
     expiredOn,
     username
   };
-  const token = jwt.sign(JSON.stringify(authInfo), config.get("jwt").secret);
+  const token = jwt.sign(JSON.stringify(authInfo), config.get('jwt').secret);
   await new User({
     username,
     password
@@ -110,7 +110,19 @@ const signup = async (req, res, next) => {
   return;
 };
 
+const test = async (req, res, next) => {
+  // const resposne = await User.find({}).setOptions({
+  //   explain: 'executionStats'
+  // });
+  // console.log(resposne);
+  res.status(200);
+  res.json({
+    data: 'messa'
+  });
+};
+
 module.exports = {
   login,
-  signup
+  signup,
+  test
 };
