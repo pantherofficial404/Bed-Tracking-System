@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { withStyles ,Typography} from '@material-ui/core';
-
 import style from './style';
 
 class Layout extends Component {

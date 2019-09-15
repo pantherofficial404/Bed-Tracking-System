@@ -5,7 +5,7 @@ const config = {
         return process.env.PUBLIC_URL;
     },
     get SERVER_URL(){
-        return process.env.SERVER_URL;
+        return process.env.REACT_APP_SERVER_URL;
     },
     get DEBUG(){
         return process.env.NODE_ENV !== 'production';
