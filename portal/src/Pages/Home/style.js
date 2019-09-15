@@ -1,10 +1,10 @@
-const style = (theme) => ({
+const style = theme => ({
   container: {
     display: 'flex',
     alignItems: 'center',
     flex: 1,
-    flexDirection: 'column',
-  },
+    flexDirection: 'column'
+  }
 });
 
 export default style;

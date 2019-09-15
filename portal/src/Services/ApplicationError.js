@@ -1,4 +1,3 @@
-class ApplicationError extends Error {
-}
+class ApplicationError extends Error {}
 
 export default ApplicationError;
