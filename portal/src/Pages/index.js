@@ -7,7 +7,7 @@ import Login from 'Pages/Login';
 // const PrivateRouter = ({component,...rest})=>{
 //     const render = (props)=> {
 //         let redirectUrl = '/login';
-//     }
+//     }Login
 // }
 
 class Root extends React.Component {

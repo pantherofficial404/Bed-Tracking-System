@@ -18,6 +18,6 @@ const userSchema = new Schema(
   SchemaOptions
 );
 
-userSchema.index({ userSchema: 1 });
+userSchema.index({ username: 1, sparse: true }, { background: true });
 
 module.exports = mongoose.model('User', userSchema);

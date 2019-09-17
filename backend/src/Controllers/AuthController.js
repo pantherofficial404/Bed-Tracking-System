@@ -12,7 +12,6 @@ const login = async (req, res, next) => {
     message.push('Password is required');
   }
   if (!username || !password) {
-    res.status(401);
     res.json({
       code: 401,
       data: {
@@ -25,7 +24,6 @@ const login = async (req, res, next) => {
 
   const user = await User.findOne({ username, password }, { username: 1 });
   if (!user) {
-    res.status(401);
     res.json({
       code: 401,
       data: {
@@ -64,7 +62,6 @@ const signup = async (req, res, next) => {
     message.push('Password is required');
   }
   if (!username || !password) {
-    res.status(401);
     res.json({
       code: 401,
       data: {
@@ -76,7 +73,6 @@ const signup = async (req, res, next) => {
   }
   const user = await User.findOne({ username, password }, { username: 1 });
   if (user) {
-    res.status(401);
     res.json({
       code: 401,
       data: {
@@ -110,19 +106,7 @@ const signup = async (req, res, next) => {
   return;
 };
 
-const test = async (req, res, next) => {
-  // const resposne = await User.find({}).setOptions({
-  //   explain: 'executionStats'
-  // });
-  // console.log(resposne);
-  res.status(200);
-  res.json({
-    data: 'messa'
-  });
-};
-
 module.exports = {
   login,
-  signup,
-  test
+  signup
 };

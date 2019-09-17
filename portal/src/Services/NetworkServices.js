@@ -1,5 +1,5 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
-import { ApplicationError, LogServices } from 'Services';
+import { ApplicationError, LogServices, AuthServices } from 'Services';
 
 const logger = LogServices.getInstance('Service:Network');
 
@@ -51,7 +51,7 @@ class NetworkService {
       return header;
     }
 
-    const token = AuthService.getToken();
+    const token = AuthServices.getToken();
     if (token) {
       header.Authorization = `Bearer ${token}`;
     }
