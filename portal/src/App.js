@@ -10,7 +10,7 @@ import pink from '@material-ui/core/colors/pink';
 const theme = createMuiTheme({
   palette: {
     primary: blue,
-    secondary: pink,
+    secondary: pink
   },
   typography: {
     fontFamily: [
@@ -24,9 +24,9 @@ const theme = createMuiTheme({
       'sans-serif',
       '"Apple Color Emoji"',
       '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
-  },
+      '"Segoe UI Symbol"'
+    ].join(',')
+  }
 });
 
 class App extends React.Component {
